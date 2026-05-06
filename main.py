@@ -42,7 +42,6 @@ def main():
     # 2. VERİ KAYNAĞI: S3'E VERİ YÜKLEME
     # =====================================================================
     # Yerel ortamda bulunan veri setinin S3'e yüklenmesi.
-    # Gerçek senaryoda, projede kullanacağınız .csv veri setinin yolunu girmelisiniz.
     local_data_path = 'data/dataset.csv'
 
     # Eğer data klasörü ve dosyası yoksa örnek bir sentetik veri seti oluşturalım:
@@ -124,10 +123,7 @@ def main():
     # =====================================================================
     # 6. KAYNAKLARI TEMİZLEME (CLEANUP)
     # =====================================================================
-    # DİKKAT: AWS'de açık kalan Endpoint'ler saatlik ücrete tabidir. 
-    # Proje test edildikten sonra gereksiz faturalandırmayı önlemek için Endpoint silinmelidir.
-    # (Not: Hocanız projeyi inceleyecekse veya sistemi canlı tutmak istiyorsanız bu kısmı yoruma alabilirsiniz)
-    
+
     cleanup_choice = input("Maliyeti önlemek için SageMaker Endpoint'i silinsin mi? (E/H): ")
     if cleanup_choice.lower() == 'e':
         print("Kullanılan kaynaklar (Endpoint) temizleniyor...")
